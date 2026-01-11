@@ -21,7 +21,7 @@ const botBrain = (msg) => {
   if (text.includes("help"))
     return "You can ask me about MERN, JavaScript, projects, or general questions.";
 
-  // Default smart replies
+  ////////// Default smart replies for AI //////////////
   const fallbackReplies = [
     "Interesting... tell me more 👀",
     "I understand. Continue...",

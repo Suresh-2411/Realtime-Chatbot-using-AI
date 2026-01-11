@@ -10,14 +10,14 @@ const Chat = () => {
     e.preventDefault();
     if (!text.trim()) return;
 
-    // Add user message ONCE
+    ///// Add user message only ONCE //////////
     const userMsg = { sender: "user", text };
     setMessages((prev) => [...prev, userMsg]);
 
     try {
       const res = await API.post("/chat", { message: text });
 
-      // Add bot reply ONCE
+      ////// Add bot reply only ONCE ////////////
       const botMsg = res.data.bot;
       setMessages((prev) => [...prev, botMsg]);
     } catch (err) {
